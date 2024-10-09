@@ -15,15 +15,14 @@ const tokenGen = (user, statusCode, res) => {
 
     user.password = undefined  //to remove the user password from the output 
 
-
-
     res.status(statusCode).json({
         status: 'success',
         access_Token: token,
-        user
+        user 
     })
 
 }
+
 
 exports.signup = async (req, res) => {
     const { firstName, lastName, username, email, password, confirmPassword } = req.body;
@@ -93,7 +92,7 @@ exports.login = async (req, res) => {
 };
 
 exports.signout = async (req, res) => {
-    res.clearCookie('access_token')
+    res.clearCookie('jwt')
 
     res.status(200).json({
         status: 'success',
