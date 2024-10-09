@@ -18,7 +18,7 @@ const tokenGen = (user, statusCode, res) => {
     res.status(statusCode).json({
         status: 'success',
         access_Token: token,
-        user 
+        user
     })
 
 }
@@ -92,7 +92,7 @@ exports.login = async (req, res) => {
 };
 
 exports.signout = async (req, res) => {
-    res.clearCookie('jwt')
+    res.clearCookie('access_token')
 
     res.status(200).json({
         status: 'success',
