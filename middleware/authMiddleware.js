@@ -15,7 +15,8 @@ const auth = async (req, res, next) => {
         }
         const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
-        req.user = decoded;   //adding decoded info to the req object
+        req.user = decoded;  //adding decoded info to the req object
+        req.userId = decoded.id; 
         next();
 
 

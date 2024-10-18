@@ -1,4 +1,4 @@
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 const Post = require('../model/PostModel');
 
 exports.getPostBySearch = async (req, res) => {
@@ -70,9 +70,6 @@ exports.createPost = async (req, res) => {
         return res.status(500).json({ message: 'Error creating post', error: error.message });
     }
 };
-
-
-
 
 exports.updatePost = async (req, res) => {
     try {

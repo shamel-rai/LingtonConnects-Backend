@@ -3,9 +3,11 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+
 const authRoutes = require('./routes/Authroute');
 const statusRoutes = require('./routes/ServerstatusRoute');
-const postRoutes = require('./routes/PostRoutes'); 
+const postRoutes = require('./routes/PostRoutes');
+
 
 const app = express();
 
